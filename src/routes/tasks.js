@@ -4,7 +4,7 @@ import { getAll, getById, create, update, remove } from '../db/taskStore.js';
 const router = Router();
 const VALID_PRIORITIES = ['low', 'mid', 'high'];
 
-// GET /api/tasks - obtener todas las tareas
+// GET /api/tasks --> obtener todas las tareas
 router.get("/", async (req, res, next) => {
     try {
         const tasks = await getAll();
@@ -21,7 +21,7 @@ router.get("/", async (req, res, next) => {
     }
 });
 
-// GET /api/tasks/:id - obtener tarea por ID
+// GET /api/tasks/:id --> obtener tarea por ID
 router.get("/:id", async (req, res, next) => {
     try {
         const { id } = req.params;
@@ -46,7 +46,7 @@ router.get("/:id", async (req, res, next) => {
     }
 });
 
-// POST /api/tasks - crear una tarea
+// POST /api/tasks --> crear una tarea
 router.post("/", async (req, res, next) => {
     try {
         const { title, description = "", priority = "low" } = req.body;
@@ -74,7 +74,7 @@ router.post("/", async (req, res, next) => {
     }
 });
 
-// PUT /api/tasks/:id - modificar una tarea existente
+// PUT /api/tasks/:id --> modificar una tarea existente
 router.put("/:id", async (req, res, next) => {
     try {
         const { id } = req.params;
@@ -118,7 +118,7 @@ router.put("/:id", async (req, res, next) => {
     }
 });
 
-// DELETE /api/tasks/:id - eliminar una tarea
+// DELETE /api/tasks/:id --> eliminar una tarea
 router.delete("/:id", async (req, res, next) => {
     try {
         const { id } = req.params;
