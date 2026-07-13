@@ -1,3 +1,5 @@
+API completa para gestión de tareas con operaciones CRUD (Crear, Leer, Actualizar, Eliminar). Desarrollada con Node.js, Express y MongoDB.
+
 | Método | Endpoint | Descripción |
 |--------|----------|-------------|
 | GET | `/api/tasks` | Obtener todas las tareas |
